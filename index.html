@@ -1,128 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kashish Srivastava</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #eef2f7;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kashish Srivastava</title>
 
-    header {
-      background: linear-gradient(to right, #4a90e2, #6fc3df);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 10px;
-    }
+body {
+  background: #f5f7fa;
+  color: #333;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
-    .section {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
 
-    .section:hover {
-      transform: translateY(-5px);
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #4a90e2, #6fc3df);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease;
+}
 
-    h2 {
-      color: #4a90e2;
-      margin-bottom: 10px;
-    }
+.hero img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #4a90e2;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
 
-    .btn:hover {
-      background: #357abd;
-    }
-  </style>
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* BUTTON */
+.btn {
+  background: #4a90e2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <!-- Add your photo file in repo -->
-  <img src="profile.jpg" alt="Profile Photo">
+<!-- NAVBAR -->
+<nav>
+  <h3>Kashish</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="Profile">
   <h1>Kashish Srivastava</h1>
-  <p>Aspiring Educator | English Teacher</p>
-</header>
+  <p>English Teacher | Aspiring Educator</p>
+</div>
 
-<div class="container">
-
-  <div class="section">
-    <h2>About Me</h2>
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About Me</h2>
+  <div class="card">
     <p>
-      Passionate English teacher dedicated to creating engaging learning environments 
+      Passionate English teacher dedicated to building engaging learning environments 
       and improving student communication skills.
     </p>
   </div>
+</div>
 
-  <div class="section">
-    <h2>Work Experience</h2>
-    <ul>
-      <li>English Teacher – International School (1 year experience)</li>
-      <li>D.Y Patil High School, Ambi (2024 – Present)</li>
-    </ul>
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <p>1 year experience as English Teacher in an International School</p>
   </div>
-
-  <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li>B.Ed – Spicer Adventist University (Result Awaited)</li>
-      <li>B.A. English – Pune University</li>
-      <li>12th CBSE – 86.5%</li>
-      <li>10th CBSE – 80%</li>
-    </ul>
+  <div class="card">
+    <p>D.Y Patil High School, Ambi (2024 – Present)</p>
   </div>
+</div>
 
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Communication Skills</li>
-      <li>Classroom Management</li>
-      <li>Lesson Planning</li>
-    </ul>
+<!-- EDUCATION -->
+<div class="section" id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p>B.Ed – Spicer Adventist University (Result Awaited)</p>
   </div>
+  <div class="card">
+    <p>B.A. English – Pune University (2022)</p>
+  </div>
+</div>
 
-  <div class="section">
-    <h2>Contact</h2>
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <div class="card">
     <p>Email: Kashish.sri24@gmail.com</p>
     <p>Phone: 8806603967</p>
+    <br>
     <a href="resume.pdf" download class="btn">Download Resume</a>
   </div>
-
 </div>
+
+<footer>
+  <p>© 2026 Kashish Srivastava</p>
+</footer>
 
 </body>
 </html>
